@@ -6,9 +6,9 @@ import { AiFillStar } from 'react-icons/ai';
 
 export default function CleanLayout() {
   return (
-    <div className="min-h-screen bg-neutral-900"> {/* Dark background for the overall layout */}
+    <div className="min-h-screen bg-black"> {/* Dark background for the overall layout */}
       {/* Hero Section with How to Use */}
-      <section className="py-24 bg-neutral-900">
+      <section className="py-24 bg-black">
         <div className="container mx-auto px-6">
           <h1 className="text-5xl font-bold text-center mb-20 text-gray-100">
             How to Use <span className="text-gray-100">NoaiGPT</span>
@@ -58,8 +58,8 @@ export default function CleanLayout() {
             </div>
 
             {/* Tweet Section */}
-            <div className="lg:w-1/2 flex items-center justify-center">
-              <div className="bg-neutral-800 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.1)] p-10 w-full max-w-xl">
+            <div className="flex items-center justify-center w-full lg:w-1/2">
+              <div className="bg-neutral-800 rounded-3xl shadow-[0_0_30px_rgba(255,255,255,0.1)] p-10 w-full max-w-xl flex items-center justify-center">
                 <Tweet id="1732824684683784516" />
               </div>
             </div>

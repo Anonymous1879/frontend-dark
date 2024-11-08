@@ -106,10 +106,9 @@ export function AnimatedBeamMultipleOutputDemo({
   return (
     <div
       className={cn(
-        "relative flex min-h-[100vh] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-neutral-800 p-10 md:shadow-l", // Updated background color for dark mode
+        "relative flex min-h-[100vh] w-full flex-col items-center justify-center overflow-hidden rounded-lg border border-neutral-800 bg-neutral-900 p-10 md:shadow-lg", // Updated background color for dark mode
         className
       )}
-      style={{ borderRadius: "0.7rem" }} // Adds inline style for border radius
       ref={containerRef}
     >
       <motion.div
@@ -127,7 +126,7 @@ export function AnimatedBeamMultipleOutputDemo({
           creating a new challenge for content creators and publishers.
         </p>
       </motion.div>
-
+  
       <div className="flex justify-between items-center w-full max-w-3xl mb-12">
         <div className="flex items-center space-x-20">
           <div className="flex flex-col items-center">
@@ -136,7 +135,7 @@ export function AnimatedBeamMultipleOutputDemo({
             </Circle>
             <p className="text-sm mt-2 text-center text-gray-300">OpenAI</p>
           </div>
-
+  
           <div ref={noaigptContainerRef} className="flex flex-col items-center">
             <Circle ref={noaigptRef} color="#00FF00">
               <Icons.noaigpt />
@@ -144,7 +143,7 @@ export function AnimatedBeamMultipleOutputDemo({
             <p className="text-sm mt-2 text-center text-gray-300">NoAIGPT</p>
           </div>
         </div>
-
+  
         <div
           ref={detectorsRef}
           className="flex flex-col items-center gap-4 mt-8"
@@ -167,11 +166,11 @@ export function AnimatedBeamMultipleOutputDemo({
               {React.createElement(Icons[icon])}
             </Circle>
           ))}
-
+  
           <p className="text-sm mt-2 text-center text-gray-300">AI Detectors</p>
         </div>
       </div>
-
+  
       <motion.div
         className="text-center max-w-xl"
         initial={{ opacity: 0, y: 20 }}
@@ -210,7 +209,7 @@ export function AnimatedBeamMultipleOutputDemo({
           and true to your voice.
         </p>
       </motion.div>
-
+  
       {/* AnimatedBeams */}
       <AnimatedBeam
         containerRef={containerRef}
@@ -244,6 +243,7 @@ export function AnimatedBeamMultipleOutputDemo({
       ))}
     </div>
   );
+  
 }
 
 const Icons = {
@@ -278,18 +278,18 @@ const Icons = {
     </svg>
   ),
   gptzero: () => (
-    <img src="/assets/gptzero.png" alt="GPTZero" width="100%" height="100%" />
+    <img src="/assets/logos/gptzero.webp" alt="GPTZero" width="100%" height="100%" className="filter brightness-0 invert" />
   ),
   turnitin: () => (
-    <img src="/assets/turnitin.png" alt="Turnitin" width="100%" height="100%" />
+    <img src="/assets/logos/turnitin.webp" alt="Turnitin" width="100%" height="100%" className="filter brightness-0 invert" />
   ),
   zerogpt: () => (
-    <img src="/assets/zerogpt.png" alt="ZeroGPT" width="100%" height="100%" />
+    <img src="/assets/logos/zerogpt.webp" alt="ZeroGPT" width="100%" height="100%" className="filter brightness-0 invert" />
   ),
   undetectableai: () => (
-    <img src="/assets/undetectable.png" alt="Undetectable AI" width="100%" height="100%" />
+    <img src="/assets/logos/undetectable.webp" alt="Undetectable AI" width="100%" height="100%" className="filter brightness-0 invert" />
   ),
   crossplag: () => (
-    <img src="/assets/crossplag.png" alt="Undetectable AI" width="100%" height="100%" />
+    <img src="/assets/logos/crossplag.webp" alt="Crossplag" width="100%" height="100%" className="filter brightness-0 invert"/>
   ),
 };

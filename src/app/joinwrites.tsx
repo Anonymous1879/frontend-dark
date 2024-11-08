@@ -7,45 +7,45 @@ const reviews = [
     name: "Jack",
     username: "@jack",
     body: "NoaiGPT has transformed the way I create content. My blog posts are more engaging than ever!",
-    img: "/assets/Undetectableai.png",
+    img: "/assets/profile pics/jack.png",
   },
   {
     name: "Emily Chen",
     username: "@emily.11",
     body: "As a digital marketer, NoaiGPT helps me produce high-quality content quickly, boosting my SEO efforts significantly.",
-    img: "/assets/Undetectableai.png",
+    img: "/assets/profile pics/jill.png",
   },
   {
     name: "Anish Poudel",
     username: "@poudel.anish",
     body: "The customizable outputs allow me to tailor content precisely to my audience's needs. It's a game-changer!",
-    img: "/assets/Undetectableai.png",
+    img: "/assets/profile pics/john.png",
   },
   {
     name: "Rama Sharma",
     username: "@ram.sharma",
     body: "NoaiGPT has completely changed how we approach content creation. The AI-generated text is indistinguishable from human writing!",
-    img: "/assets/Undetectableai.png",
+    img: "/assets/profile pics/jane.png",
   },
   {
     name: "Michael L.",
     username: "@michael",
     body: "As a marketer, I need content that connects with people. NoaiGPT helps me achieve that effortlessly.",
-    img: "/assets/Undetectableai.png",
+    img: "/assets/profile pics/jenny.png",
   },
   {
     name: "Sarah J.",
     username: "@sarah",
     body: "NoaiGPT has revolutionized my content creation process. My articles now have a truly authentic voice.",
-    img: "/assets/Undetectableai.png",
+    img: "/assets/profile pics/james.png",
   },
 ];
 
 const avatarUrls = [
-  "/assets/Undetectableai.png",
-  "/assets/Undetectableai.png",
-  "/assets/Undetectableai.png",
-  "/assets/Undetectableai.png",
+  "/assets/profile pics/16860528.png",
+  "/assets/profile pics/20110627.jpeg",
+  "/assets/profile pics/59228569.png",
+  "/assets/profile pics/106103625.png",
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
@@ -86,7 +86,7 @@ const ReviewCard = ({
 
 export default function CommunitySection() {
   return (
-    <section className="relative h-[90vh] w-full overflow-hidden bg-neutral-900">
+    <section className="relative h-[90vh] w-full overflow-hidden bg-black">
       <div className="flex h-full flex-col items-center justify-between">
         {/* Center Content */}
         <div className="flex flex-1 flex-col items-center justify-center space-y-8 px-4 text-center">
@@ -114,8 +114,8 @@ export default function CommunitySection() {
                 <ReviewCard key={review.username} {...review} />
               ))}
             </Marquee>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-neutral-900"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-neutral-900"></div>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black"></div>
           </div>
         </div>
       </div>

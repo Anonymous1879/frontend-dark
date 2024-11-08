@@ -4,15 +4,15 @@ import ShineBorder from "@/components/ui/shine-border";
 
 export function CompareDemo() {
   return (
-    <section className="mt-4 h-[100vh] flex justify-center items-center bg-neutral-900"> {/* Dark background for the section */}
+    <section className="mt-4 h-[100vh] flex justify-center items-center bg-black"> {/* Dark background for the section */}
       <div className="h-full w-full flex justify-center items-center">
-        <div className="p-2 border rounded-3xl bg-neutral-800 border-neutral-700"> {/* Dark background and border */}
+        <div className="p-2 border rounded-3xl bg-neutral-800 border-neutral-700 w-full max-w-[120vh]"> {/* Dark background and border */}
           <Compare
-            firstImage="https://assets.aceternity.com/code-problem.png"
-            secondImage="https://assets.aceternity.com/code-solution.png"
-            firstImageClassName="object-cover object-left-top"
-            secondImageClassname="object-cover object-left-top"
-            className="h-[250px] w-[200px] md:h-[500px] md:w-[800px]"
+            firstImage="/assets/Bypass Photos/aitext.png"
+            secondImage="/assets/Bypass Photos/humanizedtext.png"
+            firstImageClassName="object-cover object-top"
+            secondImageClassname="object-cover object-top"
+            className="w-full h-[60vh] md:h-[70vh] lg:h-[80vh] max-h-[100vh]"
             slideMode="hover"
           />
         </div>
