@@ -16,6 +16,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { serverURL } from "@/utils/utils";
 import { logos, logoSettings, kathmanduText, countWords } from "./constants";
+import { NextSeo } from 'next-seo';  // Importing next-seo
+
 
 import Header from "./header";
 
@@ -287,40 +289,31 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>NoaiGPT - Transform AI Text into Human Text</title>
-        <meta
-          name="description"
-          content="Use NoaiGPT to transform AI-generated text into human-like text with natural flow and no AI detection."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          property="og:title"
-          content="NoaiGPT - Transform AI Text into Human Text"
-        />
-        <meta
-          property="og:description"
-          content="Use NoaiGPT to transform AI-generated text into human-like text with natural flow and no AI detection."
-        />
-        <meta
-          property="og:image"
-          content="https://your-image-url.com/og-image.jpg"
-        />
-        <meta property="og:url" content="https://your-website-url.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="NoaiGPT - Transform AI Text into Human Text"
-        />
-        <meta
-          name="twitter:description"
-          content="Use NoaiGPT to transform AI-generated text into human-like text with natural flow and no AI detection."
-        />
-        <meta
-          name="twitter:image"
-          content="https://your-image-url.com/twitter-image.jpg"
-        />
-      </Head>
+      <NextSeo
+        title="NoaiGPT - Transform AI Text into Human Text"
+        description="Use NoaiGPT to transform AI-generated text into human-like text with natural flow and no AI detection."
+        canonical="http://noaigpt.com"
+        openGraph={{
+          url: 'http://noaigpt.com',
+          title: 'NoaiGPT - Transform AI Text into Human Text',
+          description: 'Use NoaiGPT to transform AI-generated text into human-like text with natural flow and no AI detection.',
+          images: [
+            {
+              url: 'https://your-image-url.com/og-image.jpg',
+              width: 800,
+              height: 600,
+              alt: 'NoaiGPT Image',
+              type: 'image/jpeg',
+            },
+          ],
+          site_name: 'NoaiGPT',
+        }}
+        twitter={{
+          handle: '@yourTwitterHandle',
+          site: '@yourWebsiteHandle',
+          cardType: 'summary_large_image',
+        }}
+      />
 
       <Header
       onShowSignupForm={() => setShowSignupForm(true)}
