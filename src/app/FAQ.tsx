@@ -6,6 +6,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { faqJsonLd } from '../../next-seo.config';
+
+
+
 
 export function AccordionDemo() {
   // Generating JSON-LD structured data for the FAQ
@@ -37,7 +41,7 @@ export function AccordionDemo() {
   return (
     <>
       {/* SEO Configuration */}
-      <NextSeo
+      <NextSeo 
         title="Frequently Asked Questions | NoAIGPT"
         description="Find answers to common questions about NoAIGPT, an AI-powered tool that transforms AI-generated text into human-like content."
         openGraph={{
@@ -59,6 +63,12 @@ export function AccordionDemo() {
           site: "@yoursite",
           cardType: "summary_large_image",
         }}
+
+        
+      />
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Accordion Section */}

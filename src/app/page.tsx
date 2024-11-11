@@ -17,6 +17,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { serverURL } from "@/utils/utils";
 import { logos, logoSettings, kathmanduText, countWords } from "./constants";
 import { NextSeo } from 'next-seo';  // Importing next-seo
+import { defaultSEOConfig,breadcrumbJsonLd } from '../../next-seo.config';
 
 
 import Header from "./header";
@@ -289,32 +290,10 @@ export default function Home() {
 
   return (
     <>
-      <NextSeo
-        title="NoaiGPT - Transform AI Text into Human Text"
-        description="Use NoaiGPT to transform AI-generated text into human-like text with natural flow and no AI detection."
-        canonical="http://noaigpt.com"
-        openGraph={{
-          url: 'http://noaigpt.com',
-          title: 'NoaiGPT - Transform AI Text into Human Text',
-          description: 'Use NoaiGPT to transform AI-generated text into human-like text with natural flow and no AI detection.',
-          images: [
-            {
-              url: 'https://your-image-url.com/og-image.jpg',
-              width: 800,
-              height: 600,
-              alt: 'NoaiGPT Image',
-              type: 'image/jpeg',
-            },
-          ],
-          site_name: 'NoaiGPT',
-        }}
-        twitter={{
-          handle: '@yourTwitterHandle',
-          site: '@yourWebsiteHandle',
-          cardType: 'summary_large_image',
-        }}
-      />
-
+      <NextSeo {...defaultSEOConfig}/>
+      <script type="application/ld+json">
+  {JSON.stringify([breadcrumbJsonLd])}
+</script>
       <Header
       onShowSignupForm={() => setShowSignupForm(true)}
 />
