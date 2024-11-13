@@ -278,7 +278,7 @@ const Icons = {
     </svg>
   ),
   gptzero: () => (
-    <img src="/assets/logos/gptzero.webp" alt="GPTZero" width="100%" height="100%" className="filter brightness-0 invert" />
+    <img src="/assets/logos/Gptzero.webp" alt="GPTZero" width="100%" height="100%" className="filter brightness-0 invert" />
   ),
   turnitin: () => (
     <img src="/assets/logos/turnitin.webp" alt="Turnitin" width="100%" height="100%" className="filter brightness-0 invert" />
@@ -287,9 +287,9 @@ const Icons = {
     <img src="/assets/logos/zerogpt.webp" alt="ZeroGPT" width="100%" height="100%" className="filter brightness-0 invert" />
   ),
   undetectableai: () => (
-    <img src="/assets/logos/undetectable.webp" alt="Undetectable AI" width="100%" height="100%" className="filter brightness-0 invert" />
+    <img src="/assets/logos/Undetectable.webp" alt="Undetectable AI" width="100%" height="100%" className="filter brightness-0 invert" />
   ),
   crossplag: () => (
-    <img src="/assets/logos/crossplag.webp" alt="Crossplag" width="100%" height="100%" className="filter brightness-0 invert"/>
+    <img src="/assets/logos/Crossplag.webp" alt="Crossplag" width="100%" height="100%" className="filter brightness-0 invert"/>
   ),
 };
